@@ -126,7 +126,7 @@ ui:
   service:
     type: ClusterIP
     ports:
-      port: 80
+      port: 8080
       targetPort: 8080
   env: {} # Additional configuration key-value pairs for the ui ConfigMap
 
@@ -156,7 +156,7 @@ providers:
       host: host.docker.internal:11434
   anthropic:
     provider: Anthropic
-    model: "claude-3-sonnet-20240229"
+    model: "claude-3-5-haiku-20241022"
     apiKeySecretRef: kagent-anthropic
     apiKeySecretKey: ANTHROPIC_API_KEY
     # apiKey: ""
